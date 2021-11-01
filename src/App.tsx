@@ -1,16 +1,16 @@
-import React from 'react';
-import styles from './App.module.css';
-import { selectLottery } from './app/components/lottery/lotterySlice';
-import { useAppSelector } from './app/hooks';
-import { SelectLottery } from './components/behavior/selectLottery/SelectLottery';
-import { ContestShow } from './components/presentation';
+import React from "react";
+import styles from "./App.module.css";
+import { selectLottery } from "./app/components/lottery/lotterySlice";
+import { useAppSelector } from "./app/hooks";
+import { SelectLottery } from "./components/behavior/selectLottery/SelectLottery";
+import { ContestShow } from "./components/presentation";
 
-import Trevo from './assets/svg/trevo.svg';
+import Trevo from "./assets/svg/trevo.svg";
 
 function App() {
 	const { contestData } = useAppSelector(selectLottery);
 
-  return (
+	return (
 		<div className={styles.App}>
 			<div className={styles.wrapper}>
 				<div className={styles.left_screen}>
@@ -28,26 +28,18 @@ function App() {
 						date={contestData?.data || ""}
 					/>
 				</div>
-				<div>
+				<div className={styles.right_screen}>
+					<div />
 					<p>
 						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex
 						asperiores, pariatur explicabo sapiente aspernatur maxime. Quisquam
 						quaerat ut ipsa ex deleniti aspernatur commodi eaque praesentium
 						animi! Harum, aperiam deserunt! Quae.
 					</p>
-					<p>
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex
-						asperiores, pariatur explicabo sapiente aspernatur maxime. Quisquam
-						quaerat ut ipsa ex deleniti aspernatur commodi eaque praesentium
-						animi! Harum, aperiam deserunt! Quae.
+					<p className={styles.footer_text}>
+						Este sorteio é meramente ilustrativo e não possui nenhuma ligação
+						com a CAIXA.
 					</p>
-					<p>
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex
-						asperiores, pariatur explicabo sapiente aspernatur maxime. Quisquam
-						quaerat ut ipsa ex deleniti aspernatur commodi eaque praesentium
-						animi! Harum, aperiam deserunt! Quae.
-					</p>
-
 				</div>
 			</div>
 		</div>
