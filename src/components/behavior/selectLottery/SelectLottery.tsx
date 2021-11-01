@@ -10,6 +10,8 @@ import {
 } from "../../../app/components/lottery/lotteryThunk";
 import { useAppDispatch, useAppSelector } from "../../../app/hooks";
 
+import styles from "./SelectLottery.module.css";
+
 export function SelectLottery() {
 	const { lotteryData, lotteryContestData } = useAppSelector(selectLottery);
 	const [contestId, setContestId] = useState("");
@@ -47,6 +49,7 @@ export function SelectLottery() {
 	return (
 		<div>
 			<select
+				className={styles.select}
 				name="lotteries"
 				id="lotteries"
 				onChange={(event) => {
