@@ -1,28 +1,26 @@
 import {
 	IContestResponseTypes,
-	IErrorResponseTypes,
 	ILotteryContestResponseTypes,
 	ILotteryResponseTypes,
 } from "../../../@types/lotery";
 import { api } from "../../../@types/modules/api";
-import { errorModule } from "../../../@types/modules/error";
 
-export const fetchLottery = async (): Promise<
-	ILotteryResponseTypes[] | IErrorResponseTypes
-> => {
+export const fetchLottery = async (): Promise<ILotteryResponseTypes[] | null> => {
 	try {
 		const data: ILotteryResponseTypes[] = await api.get(
 			"https://brainn-api-loterias.herokuapp.com/api/v1/loterias"
 		);
 
+		console.log('data', data);
+
 		return data;
 	} catch (error) {
-		return errorModule(error);
+		return null;
 	}
 };
 
 export const fetchLotteryContests = async (): Promise<
-	ILotteryContestResponseTypes[] | IErrorResponseTypes
+	ILotteryContestResponseTypes[] | null
 > => {
 	try {
 		const data: ILotteryContestResponseTypes[] = await api.get(
@@ -31,12 +29,12 @@ export const fetchLotteryContests = async (): Promise<
 
 		return data;
 	} catch (error) {
-		return errorModule(error);
+		return null;
 	}
 };
 
 export const fetchContests = async (id: string): Promise<
-	IContestResponseTypes | IErrorResponseTypes
+	IContestResponseTypes | null
 > => {
 	try {
 		const data: IContestResponseTypes = await api.get(
@@ -45,7 +43,7 @@ export const fetchContests = async (id: string): Promise<
 
 		return data;
 	} catch (error) {
-		return errorModule(error);
+		return null;
 	}
 };
 

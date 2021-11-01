@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
 import './App.css';
+import { SelectLottery } from './components/behavior/selectLottery/SelectLottery';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
+        <SelectLottery />
         <span>
           <span>Learn </span>
           <a

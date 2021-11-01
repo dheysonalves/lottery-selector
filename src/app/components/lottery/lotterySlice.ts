@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import {
 	IContestResponseTypes,
-	IErrorResponseTypes,
 	ILotteryContestResponseTypes,
 	ILotteryResponseTypes,
 } from "../../../@types/lotery";
@@ -9,10 +8,11 @@ import { RootState } from "../../../app/store";
 import { fetchContestsThunk, fetchLotteryContestsThunk, fetchLotteryThunk } from "./lotteryThunk";
 
 export interface LotteryState {
-	lotteryData: ILotteryResponseTypes[] | IErrorResponseTypes;
-	lotteryContestData: ILotteryContestResponseTypes[] | IErrorResponseTypes;
-	contestData: IContestResponseTypes | IErrorResponseTypes | null;
+	lotteryData: ILotteryResponseTypes[] | null;
+	lotteryContestData: ILotteryContestResponseTypes[] | null;
+	contestData: IContestResponseTypes | null;
 	status: "idle" | "loading" | "failed";
+	error: boolean;
 }
 
 const initialState: LotteryState = {
@@ -20,6 +20,7 @@ const initialState: LotteryState = {
 	lotteryContestData: [],
 	contestData: null,
 	status: "idle",
+	error: false,
 };
 
 export const lotterySlice = createSlice({
@@ -34,10 +35,17 @@ export const lotterySlice = createSlice({
 			.addCase(fetchLotteryThunk.pending, (state) => {
 				state.status = "loading";
 				state.lotteryData = [];
+				state.error = false;
 			})
 			.addCase(fetchLotteryThunk.fulfilled, (state, action) => {
 				state.status = "idle";
 				state.lotteryData = action.payload;
+				state.error = false;
+			})
+			.addCase(fetchLotteryThunk.rejected, (state, action) => {
+				state.status = "idle";
+				state.lotteryData = [];
+				state.error = true;
 			});
 		builder
 			.addCase(fetchLotteryContestsThunk.pending, (state) => {
@@ -60,7 +68,7 @@ export const lotterySlice = createSlice({
 	},
 });
 
-export const selectCount = (state: RootState) => state.lottery;
+export const selectLottery = (state: RootState) => state.lottery;
 
 export default lotterySlice.reducer;
 
