@@ -1,44 +1,51 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# Exercício de Front-end
 
-## Available Scripts
+<img src="https://user-images.githubusercontent.com/2853428/116301437-65c01a00-a776-11eb-9ae8-7d6d9cf3d128.png">
 
-In the project directory, you can run:
+## Introdução
 
-### `yarn start`
+A proposta do exercício de front-end da **Brainn** é ser simples e divertido.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<br>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Exercício
 
-### `yarn test`
+O objetivo é construir uma **aplicação web front-end** que mostre os **Resultados das Loterias**.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Recursos
 
-### `yarn build`
+- Layout: https://www.figma.com/file/H2qrYBCFMf4didYmxRwTxP/Brainn-Frontend-Challenge
+- API: https://brainn-api-loterias.herokuapp.com
+- Tipografia (webfont): [Montserrat](https://fonts.google.com/specimen/Montserrat)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Requisitos & Funcionalidades
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- A aplicação terá que suportar **6 sorteios**: `Mega-sena`, `Quina`, `Lotofácil`, `Lotomania`, `Timemania` e `Dia de sorte`
+- Todos esses sorteios estarão em um combo-box/select
+- Ao mudar esse combo-box, terá que mudar o **tema do sorteio**, **número do sorteio**, **data do sorteio** e **números sorteados**
+- A aplicação terá que ser responsiva, pelo menos para celulares, conforme layout
+- O consumo da API pode ser feito via REST ou GraphQL
+- Criar rotas com React Router DOM (opcional)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Tecnologias esperadas
 
-### `yarn eject`
+- React com TypeScript
+- Testes com React Testing Library e/ou Cypress
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<br>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Dúvidas
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Se você possui alguma dúvida sobre o desafio, você pode entrar em contato por e-mail com o recrutamento que já estará acompanhando seu processo ou através do e-mail diogo@brainn.co.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<br>
 
-## Learn More
+## Caso tenha finalizado e...
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### → Já está participando do processo
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Basta sinalizar por e-mail que finalizou o exercício para darmos continuidade ao processo.
+
+#### → Ainda não está participando do processo
+
+Basta enviar o link do seu teste para diogo@brainn.co para quem sabe chamarmos você para um bate-papo 😊
