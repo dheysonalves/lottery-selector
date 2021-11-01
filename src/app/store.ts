@@ -1,10 +1,8 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
 import lotteryReducer from '../app/components/lottery/lotterySlice';
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
     lottery: lotteryReducer,
   },
 });
