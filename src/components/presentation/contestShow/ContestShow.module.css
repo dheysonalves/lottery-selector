@@ -1,8 +1,9 @@
 @media only screen and (max-width: 1023px) {
 	.row {
-		flex-direction: column;
+		display: flex;
+		align-items: center;
+		flex-direction: row;
 		justify-content: space-between;
-		background-color: #6befa3;
 	}
 
 	.header {
@@ -16,7 +17,7 @@
 	.paragraph {
 		font-style: normal;
 		font-weight: bold;
-		font-size: 20px;
+		font-size: 14px;
 		line-height: 24px;
 		margin: 0px;
 		padding-top: 10px;
@@ -26,10 +27,10 @@
 
 @media screen and (min-width: 1024px) {
 	.row {
-		flex-direction: row;
+		display: flex;
+		flex-direction: column;
 		align-items: flex-start;
 		text-align: start;
-		background-color: #6befa3;
 	}
 
 	.header {
@@ -43,7 +44,7 @@
 	.paragraph {
 		font-style: normal;
 		font-weight: bold;
-		font-size: 20px;
+		font-size: 18px;
 		line-height: 24px;
 		margin: 0px;
 		padding-top: 10px;
