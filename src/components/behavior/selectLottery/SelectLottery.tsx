@@ -43,7 +43,9 @@ export function SelectLottery() {
 	}, [dispatch]);
 
 	useEffect(() => {
-		dispatch(fetchContestsThunk(contestId));
+		if (contestId) {
+			dispatch(fetchContestsThunk(contestId));
+		}
 	}, [dispatch, contestId]);
 
 	return (
@@ -56,6 +58,9 @@ export function SelectLottery() {
 					dispatchSelectedOption(event.target.value);
 					handleOptionSelected(event.target.value);
 				}}>
+				{
+					!contestId ? <option value="nothing">Selecione uma loteria</option> : null
+				}
 				{lotteryData?.length ? (
 					lotteryData.map((data) => {
 						return (

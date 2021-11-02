@@ -1,4 +1,5 @@
 import React from "react";
+import { dateFormater } from "../../../utils/Formater";
 
 import styles from "./ContestShow.module.css";
 
@@ -12,7 +13,7 @@ export function ContestShow({ contestId, date }: ContestProps) {
 		<div className={styles.row}>
 			<h3 className={styles.header}>Concurso</h3>
 			<p className={styles.paragraph}>
-				{contestId} – {date}
+				{contestId} – {dateFormater(date)}
 			</p>
 		</div>
 	);
