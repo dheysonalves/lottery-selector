@@ -6,6 +6,7 @@ import { SelectLottery } from "./components/behavior/selectLottery/SelectLottery
 import { ContestShow } from "./components/presentation";
 
 import Trevo from "./assets/svg/trevo.svg";
+import GroupedDots from "./components/presentation/dots/groupedDots/GroupedDots";
 
 function App() {
 	const { contestData } = useAppSelector(selectLottery);
@@ -30,12 +31,7 @@ function App() {
 				</div>
 				<div className={styles.right_screen}>
 					<div />
-					<p>
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex
-						asperiores, pariatur explicabo sapiente aspernatur maxime. Quisquam
-						quaerat ut ipsa ex deleniti aspernatur commodi eaque praesentium
-						animi! Harum, aperiam deserunt! Quae.
-					</p>
+					<GroupedDots numbers={contestData?.numeros || []} />
 					<p className={styles.footer_text}>
 						Este sorteio é meramente ilustrativo e não possui nenhuma ligação
 						com a CAIXA.

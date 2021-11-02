@@ -11,7 +11,7 @@ export interface ILotteryContestResponseTypes {
 export interface IContestResponseTypes {
 	id: string;
 	loteria: number;
-	numeros: number[];
+	numeros: string[];
 	data: string;
 }
 

@@ -1,0 +1,17 @@
+.dot {
+	border-radius: 50%;
+	background: #fff;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	padding: 1rem;
+	margin-bottom: 0.5rem;
+	margin-right: 0.1rem;
+}
+
+.dot_text {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 27px;
+	line-height: 33px;
+	color: #333333;
+	margin: 0px;
+}
