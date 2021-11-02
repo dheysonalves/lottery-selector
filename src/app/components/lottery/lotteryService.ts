@@ -11,8 +11,6 @@ export const fetchLottery = async (): Promise<ILotteryResponseTypes[] | null> =>
 			"https://brainn-api-loterias.herokuapp.com/api/v1/loterias"
 		);
 
-		console.log('data', data);
-
 		return data;
 	} catch (error) {
 		return null;
